@@ -1,12 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Stream {
     public static void main(String[] args){
-        List<String> names = Arrays.asList("John", "Anna", "Anjela","Bob");
-        names.stream()
-                .filter(name -> name.startsWith("A"))
-                .forEach(System.out::println);
+        List<Integer> numbers = Arrays.asList(5,10,15,20,25);
+        List<Integer> result = numbers.stream()
+                .filter(n -> n > 10)
+                .map(n -> n*2)
+                .collect(Collectors.toList());
+        System.out.println(result);
     }
 }
