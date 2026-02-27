@@ -5,11 +5,9 @@ import java.util.stream.Collectors;
 
 public class Stream {
     public static void main(String[] args){
-        List<Integer> numbers = Arrays.asList(5,10,15,20,25);
-        List<Integer> result = numbers.stream()
-                .filter(n -> n > 10)
-                .map(n -> n*2)
-                .collect(Collectors.toList());
-        System.out.println(result);
+        List<String> names = Arrays.asList("Anna","Bob","Jwe","Cas","Pos");
+        names.stream()
+                .sorted()
+                .forEach(System.out::println);
     }
 }
